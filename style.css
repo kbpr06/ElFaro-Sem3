@@ -1,0 +1,194 @@
+/* Tipografía para toda la página */
+body {
+  font-family: 'Roboto', sans-serif; /* tipografia*/
+  background-color: #f5f5f5; /*color fondo*/
+  margin: 0; /*elimina margenes*/
+  padding: 0px; /*elimina relleno*/
+  box-sizing: border-box; /*padding y border en tamaño*/
+  } 
+
+/* Tipografía para encabezado */
+header {
+  background-color: #0a0a0a; /* color fondo*/
+  padding: 15px 30px; /*espaciado interno*/
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);/* sombra bajo header*/
+  }
+  /*formato texto principal*/
+.tituloprincipal {
+  font-family: 'Merriweather', serif; /*tipografia*/
+  color:#c9d2d0; /* color texto*/
+  font-size: 4.5em; /*tamaño texto*/
+  font-weight: bold; /* grosor de la fuente*/
+  text-align: justify; /*alineacion*/
+  width: 100%; /* Asegura que el título ocupe todo el ancho disponible */
+  }
+  /*formato del contenedor div class del header*/
+.header-container {
+  display: flex; /*elementos en fila*/
+  align-items: center; /*alineacion*/
+  gap: 50px; /*espacio entre imagen y texto*/
+  justify-content: space-between;
+  flex-wrap: wrap;
+    }
+        
+  /*formato navegacion*/
+.nav ul {
+  list-style: none; /*elimina las viñetas*/
+  display: flex; /*elementos en fila*/
+  margin: 0; /*elimina margen*/
+  padding: 0; /*elimina relleno*/
+  color: white; /*color fuente*/
+  }
+  
+.nav li {
+  margin-right: 20px; /*espacio entre enlaces*/
+  }
+  
+.nav a {
+  color: #ffffff; /*color fuente*/
+  text-decoration: none; /*quita el subrayado*/
+  font-weight: bold; /*negrita*/
+  transition: color 0.3s ease; /*transicion*/
+  }
+  
+.nav a:hover {
+  color: #ffcc00; /* opcional: amarillo al pasar el mouse */
+  }
+   /*formato seccion inicio*/
+.inicio {
+  display: flex; /*elementos en fila*/
+  flex-direction: column;/*elementos en columna*/
+  align-items: center;/*alineacion central*/
+  gap: 20px; /*espacio entre elementos*/
+    
+  }
+  /*formato texto bienvenida*/
+.bienvenida {
+  font-family: 'Merriweather', serif;/*tipografia*/
+  font-size: 2.5em;/*tamaño texto*/
+  font-weight: bold;/* grosor de la fuente*/
+  text-align: justify;/*alineacion*/
+  }
+  /*formato imagen*/
+.inicio img {
+  max-width: 100%;/*tamaño*/
+  height: auto; /*mantiene proporciones*/
+  border-radius: 5px;    /*bordes redondeados*/
+  }
+  /*formato video*/
+.inicio video {
+  max-width: 100%;/*tamaño*/
+  height: auto;/*mantiene proporciones*/
+  border-radius: 5px;  /*bordes redondeados*/   
+  }
+  /* formato texto boton inicio*/
+.volver-inicio {
+  text-align: center; /*alineacion*/
+  margin-top: 20px; /*margen*/
+  margin-bottom: 40px; /* espacio antes de la siguiente sección */    
+  }
+    /* formato boton inicio*/
+.boton-volver {
+  background-color: black; /*color fondo*/
+  color: white; /*color letra*/
+  padding: 12px 24px; /*relleno*/
+  font-size: 18px;    /*tamaño letra*/
+  border-radius: 30px; /*bordes redondeados*/
+  font-weight: bold; /* letra negrita*/
+  transition: background-color 0.3s ease, transform 0.2s ease; /*transicion*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /*sombra*/
+  }
+  /*formato hover boton vovler*/
+.boton-volver:hover {
+  background-color: #b00610; /*color fondo*/
+  transform: scale(1.05); /*scala tamaño*/
+  }
+  /*formato seccion*/
+section {
+  margin-top: 20px;/*espacio entre secciones*/
+  padding: 20px;/*relleno*/
+  border: 1px solid #ccc;/*grosor borde y color*/
+}
+  
+  /* formato grilla */
+.grilla-articulos {
+  display: grid;/*establece el contenedor como una cuadricula*/
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*permite que los cuadros se apadapten, teniendo cuadros de max25'pc*/
+  gap: 20px; /*espacio entre articulos*/
+  padding: 20px;/*relleno*/
+  }
+  /*formato articulos dentro de la grilla*/
+.grilla-articulos article {
+  background-color: white; /*color*/
+  padding: 15px; /*relleno*/
+  border-radius: 5px; /*bordes redondos*/
+  transition: all 0.3s ease; /*transicion*/
+  }
+  /*formato texto articulos*/
+.texto {
+  margin-top: 10px;/*espacio entre articulos*/
+  width: 75%; /*espacio a utilizar en el cuadro*/
+  text-align: justify; /*alineacion*/
+  width: 100%;
+}
+/*formato imagen noticia*/
+.noticia img {
+  display: block;
+  margin: 0 auto; /*centrado horizontalmente*/
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  width: 100%;
+}
+  /* Hover de los articulos */
+.grilla-articulos article:hover {
+  background-color: black; /*color fondo*/
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*sombra*/
+  }
+  
+  /* formato pie de pagina */
+footer {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  }
+  
+/* Estilo para links */
+a {
+  text-decoration: underline;
+  color: inherit;
+  }
+/*formato hover link*/
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  }
+  
+  /* Responsive */
+@media (max-width: 600px) {
+  .grilla-articulos {
+    grid-template-columns: 1fr;
+   }
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+   }
+  .nav li {
+    margin-bottom: 10px;
+   }
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* espacio más pequeño en móviles */
+    text-align: center;
+  }
+  .tituloprincipal {
+    font-size: 2.5em; /* reduce el tamaño del título en móviles */
+    text-align: center;
+  }
+
+  }
+
+  
